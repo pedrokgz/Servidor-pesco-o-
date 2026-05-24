@@ -1,0 +1,107 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Meu Servidor</title>
+    <!-- Importando Tailwind CSS para o visual moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importando Lucide Icons para os ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Pequenos ajustes de animação para os botões */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex items-center justify-center p-4 sm:p-8 font-sans">
+
+    <div class="max-w-lg w-full">
+        <!-- Cabeçalho -->
+        <header class="text-center mb-10">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-500/10 mb-4 ring-1 ring-blue-500/30">
+                <i data-lucide="server" class="w-8 h-8 text-blue-400"></i>
+            </div>
+            <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+                Meu Servidor Termux
+            </h1>
+            <p class="text-slate-400 mt-2">Escolha por onde deseja acessar seus arquivos</p>
+        </header>
+
+        <!-- Container dos Botões -->
+        <div class="grid gap-4 sm:gap-6">
+            
+            <!-- Botão 1: Tailscale (Acesso Remoto) -->
+            <a href="http://100.87.206.81:8080/" target="_blank" rel="noopener noreferrer" 
+               class="card-hover group relative block p-6 bg-slate-800 rounded-2xl border border-slate-700 hover:border-blue-500 overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-blue-500/10 rounded-xl">
+                            <i data-lucide="globe" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">Acesso Remoto</h2>
+                            <p class="text-sm text-slate-400 flex items-center gap-2 mt-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                Tailscale / 4G
+                            </p>
+                        </div>
+                    </div>
+                    <i data-lucide="external-link" class="w-5 h-5 text-slate-500 group-hover:text-blue-400 transition-colors"></i>
+                </div>
+                <div class="mt-4 pt-4 border-t border-slate-700/50">
+                    <code class="text-xs text-slate-500 font-mono">http://100.87.206.81:8080/</code>
+                </div>
+            </a>
+
+            <!-- Botão 2: Local (Wi-Fi) -->
+            <a href="http://192.168.2.106:8080/" target="_blank" rel="noopener noreferrer" 
+               class="card-hover group relative block p-6 bg-slate-800 rounded-2xl border border-slate-700 hover:border-emerald-500 overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-emerald-500/10 rounded-xl">
+                            <i data-lucide="wifi" class="w-6 h-6 text-emerald-400"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-semibold text-slate-100 group-hover:text-emerald-400 transition-colors">Acesso Local</h2>
+                            <p class="text-sm text-slate-400 flex items-center gap-2 mt-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                Rede Wi-Fi de Casa
+                            </p>
+                        </div>
+                    </div>
+                    <i data-lucide="external-link" class="w-5 h-5 text-slate-500 group-hover:text-emerald-400 transition-colors"></i>
+                </div>
+                <div class="mt-4 pt-4 border-t border-slate-700/50">
+                    <code class="text-xs text-slate-500 font-mono">http://192.168.2.106:8080/</code>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Rodapé de ajuda -->
+        <div class="mt-12 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs text-slate-400">
+                <i data-lucide="info" class="w-4 h-4"></i>
+                <span>Salve esta página como favorita no seu navegador</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Inicializando os ícones -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
+```
